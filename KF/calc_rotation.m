@@ -1,4 +1,4 @@
-function [ out ] = calc_rotation( wxL, wyL, wzL, dt )
+function [ out ] = calc_rotation( wxL, wyL, wzL, dt)
 % calc_rotation outputs a magnitude and direction (normalized quaternion) 
 % for a rotation in dt time
 
@@ -19,6 +19,5 @@ Q = [ cos(dtheta/2) sin(dtheta/2)*axis_of_rot ];
 n = sqrt(sum(Q.^2));
 Q = Q/n;
 out = [ n Q ];
-
 end
 
