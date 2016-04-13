@@ -32,11 +32,11 @@ void setup() {
 void loop() {
   analogWrite(DAC, (int)val);
   Serial.println((int)val);
-  delayMicroseconds(500);
+  delayMicroseconds(50);
   val = ++val % 4096;
 
   ++ledCount;
-  if(ledCount % 300 == 0) {
+  if(ledCount % 3000 == 0) {
     int newLed = (!isLED)? HIGH: LOW;
     digitalWrite(led, newLed);   // turn the LED on (HIGH is the voltage level)
     isLED = !isLED;
